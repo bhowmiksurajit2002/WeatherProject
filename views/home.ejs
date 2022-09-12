@@ -1,0 +1,132 @@
+<%- include ('partials/header') %>
+
+
+    <!--Background image  -->
+    <div class="container-fluid no-gutters">
+     <!-- <img class="backgroundImage" src="images/tom-barrett-7FNOH-qSxMI-unsplash.jpg" alt="">
+     -->
+   
+
+    <% if(weathermain==="Rain") { %>
+     <img class="backgroundImage" src="images/rain-20.gif" alt="">
+     <embed src="music/soft-rain-ambient.mp3" loop="3" autostart="true" height="0" width="0" >
+    <% } else if(weathermain==="Clouds"){ %>
+      <img class="backgroundImage" src="images/tom-barrett-7FNOH-qSxMI-unsplash.jpg" alt="">
+    <% } else if(weathermain==="Thunderstorm"){ %>
+      <img class="backgroundImage" src="images/Thunderstrom.gif" alt="">
+      <embed src="music/Thunder-sound.mp3" loop="3" autostart="true" height="0" width="0" >
+    <% } else if(weathermain==="Snow"){ %>
+      <img class="backgroundImage" src="images/snow-fall.png" alt="">
+      <embed src="music/Jingle-bells-sound-effect.mp3" loop="3" autostart="true" height="0" width="0" >
+    <% } else if(weathermain==="Clear"){ %>
+      <img class="backgroundImage" src="images/river-clear-sky.jpg" alt="">
+      <embed src="music/forest-birds-summer.mp3" loop="3" autostart="true" height="0" width="0" >
+    <% } else if(weathermain==="Mist" || weathermain==="Haze" ||weathermain==="Fog" || weathermain==="Mist" ||	weathermain==="Smoke" ){ %>
+      <img class="backgroundImage" src="https://cdn.i-scmp.com/sites/default/files/d8/images/methode/2019/09/12/093baf30-d480-11e9-a556-d14d94601503_image_hires_120346.jpg" alt="">
+      
+   <% } else{ %>
+      <img class="backgroundImage" src="images/all-other.gif" alt="">
+      
+    <% } %>
+    
+    
+
+
+   
+    
+    </div>
+  
+  
+    <!-- Search Bar -->
+  
+    <div class="container-fluid"  ">
+      <form class="d-flex searchBar" action="/"  method="POST" >
+        
+        <input class="form-control me-2 bg-transparent " style="color:white;background-color:white" type="search" placeholder="Another Location" name="city">
+       
+        <!--<button type="submit" class="btn btn-lg searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+        -->    
+        <button type="submit"  class="btn btn-danger"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+  
+  
+  
+    <!-- Heading -->
+   
+   
+    <!--<p>
+      <span><%= temp %>°</span>&nbsp;<%= city %>&emsp;<img src="<%= imgurl %>">
+    </p>
+    <p class="p2">
+        <%= Time %>&emsp;
+        <%= Date %>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<%= weatherdescription %>
+    </p>
+  -->
+  
+    <p>
+      <span class="temp"><%= temp %>°</span>&nbsp;<%= city %><span class="type1"><img src="<%= imgurl %>"></span>
+    </p>
+    <p class="p2">
+    <span> <%= Time %>- <%= Date %> </span> <span class="type2"><%= weatherdescription %></span>
+    </p>
+
+
+   
+  
+  
+    <!-- Table -->
+  
+    <div class="container-fluid forTable bg-transparent ">
+  
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th>Weather Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Cloudy</th>
+            <td><%=cloudpercentage %>%</td>
+          </tr>
+          <tr>
+            <th scope="row">Humidity</th>
+            <td><%= humidity %>%</td>
+          </tr>
+          <tr>
+            <th scope="row">Windy</th>
+            <td><%= windspeed %> km/h</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <hr style="color:white;" />
+    </div>
+  
+  
+    <div class="container-fluid bg-transparent forTable2">
+      <hr>
+      <table class="table table-borderless">
+        <tr>
+          <th scope="row"></th>
+        </tr>
+        <tr>
+          <td><a href="/<%= city %>">Next 5 Day</a></td>
+        </tr>
+      </table>
+  
+    </div>
+  
+  
+  
+    
+    
+
+    
+
+
+
+
+
+<%- include ('partials/footer') %>

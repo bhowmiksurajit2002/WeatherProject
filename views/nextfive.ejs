@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+
+  <link rel="stylesheet" href="css/style2.css">
+
+
+  <!-- Font Awesome -->
+
+  <script src="https://kit.fontawesome.com/fb7cd8a89d.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    
+ <div>
+    <h1><%= city %></h1>
+<div id="main-contain">
+    <div class="container">
+        <span><h2><%= Day1 %></h2></span>
+        <span>Temparature: <%= parseInt(list[10].main.temp) %>°</span><br>
+        <span>Cloudy: <%= list[10].clouds.all %>%</span><br>
+        <span>Humidity: <%= list[10].main.humidity %>%</span><br>
+        <span>Windy: <%= parseInt(list[10].wind.speed) %>km/h</span><br>
+        <span>Description: <%= list[10].weather[0].description %></span><br>
+        <span>&emsp;&emsp;<img src="<%= imgurl1 %>"></i></span>
+    </div>
+
+    <div class="container">
+        <span><h2><%= Day2 %></h2></span>
+        <span>Temparature: <%= parseInt(list[18].main.temp) %>°</span><br>
+        <span>Cloudy: <%= list[18].clouds.all %>%</span><br>
+        <span>Humidity: <%= list[18].main.humidity %>%</span><br>
+        <span>Windy: <%= parseInt(list[18].wind.speed) %>km/h</span><br>
+        <span>Description: <%= list[18].weather[0].description %></span><br>
+        <span>&emsp;&emsp;<img src="<%= imgurl2 %>"></i></span>
+        
+    </div>
+
+    <div class="container">
+        <span><h2><%= Day3 %></h2></span>
+        <span>Temparature: <%= parseInt(list[26].main.temp) %>°</span><br>
+        <span>Cloudy: <%= list[26].clouds.all %>%</span><br>
+        <span>Humidity: <%= list[26].main.humidity %>%</span><br>
+        <span>Windy: <%= parseInt(list[26].wind.speed) %>km/h</span><br>
+        <span>Description: <%= list[26].weather[0].description %></span><br>
+        <span>&emsp;&emsp;<img src="<%= imgurl3 %>"></i></span>
+    </div>
+
+    <div class="container">
+        <span><h2><%= Day4 %></h2></span>
+        <span>Temparature: <%= parseInt(list[34].main.temp) %>°</span><br>
+        <span>Cloudy: <%= list[34].clouds.all %>%</span><br>
+        <span>Humidity: <%= list[34].main.humidity %>%</span><br>
+        <span>Windy: <%= parseInt(list[34].wind.speed) %>km/h</span><br>
+        <span>Description: <%= list[34].weather[0].description %></span><br>
+        <span>&emsp;&emsp;<img src="<%= imgurl4 %>"></i></span>
+    </div>
+
+    <div class="container">
+        
+        <span><h2><%= Day5 %></h2></span>
+        <span>Temparature: <%= parseInt(list[39].main.temp) %>°</span><br>
+        <span>Cloudy: <%= list[39].clouds.all %>%</span><br>
+        <span>Humidity: <%= list[39].main.humidity %>%</span><br>
+        <span>Windy: <%= parseInt(list[39].wind.speed) %>km/h</span><br>
+        <span>Description: <%= list[39].weather[0].description %></span><br>
+        <span >&emsp;&emsp;<img src="<%= imgurl5 %>"></i></span>
+        
+    </div>
+
+
+</div>
+
+ </div>
+
+</body>
+</html>
