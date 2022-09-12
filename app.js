@@ -15,7 +15,7 @@ app.set('view engine','ejs');
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 const _ = require('lodash');
-const sound = require("sound-play");
+
 
 
 //GET Request for new page (5 day page)
@@ -132,69 +132,6 @@ app.get("/:parameter",function(req,res){
 });
 
 
-//GET Request for new page (5 day page)
-/*
-app.get("/:parameter",function(req,res){
-
-    var cname= req.params.parameter;
-    if(typeof cname==='undefined')
-    {
-        console.log("Home calling");
-       // redirect("/");
-    }
-    else{
-        console.log(cname);
-        console.log("This is new page calling");
-        
-    
-        const url1="https://api.openweathermap.org/data/2.5/forecast?q="+cname+"&appid=ca65adc31695c9c98aa02edd7eb9755b";
-        let chunks = [];
-        https.get(url1,function(response){
-        response.on("data",function(data){
-            
-           // const weatherData1= JSON.parse(JSON.stringify(data));
-            const weatherData2 = JSON.parse(data);
-            
-            
-            const cityName = _.capitalize(cname);
-    
-            //console.log(weatherData1.list[0].dt);
-            var List =[];
-            List =weatherData2.list;
-            if(typeof List==='undefined')
-            {
-                console.log("List is not defined");
-                
-            }
-
-            else{
-                console.log(List[0].dt);
-                const day1 =List[0].dt;
-                const mydate = new Date(day1);
-                console.log('Day: ', mydate.getDay());
-            }
-            //console.log(List);
-            
-            
-    
-            //var month = ["January", "February", "March", "April", "May", "June",
-          // "July", "August", "September", "October", "November", "December"
-          //  ][mydate.getMonth()];
-           const day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][mydate.getDay()];
-            
-            
-            //const day1=weatherData1.list[0].dt;
-            
-    
-    
-    
-          res.render('nextfive');
-        });
-    });
-    }
-    });
-
-    */
 
 
 
@@ -202,7 +139,7 @@ app.get("/:parameter",function(req,res){
 
 app.get("/",function(req,res){
 
- sound.play("soft-rain-music.mp3").then((response) => console.log("done"));
+ 
  const cName="kolaghat";
 
     const url ="https://api.openweathermap.org/data/2.5/weather?q="+cName+"&appid=ca65adc31695c9c98aa02edd7eb9755b&units=metric";
