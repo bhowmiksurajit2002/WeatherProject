@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const https = require("https");
 const { response } = require("express");
-const geolocation = require('@react-native-community/geolocation');
+
 
 
 
